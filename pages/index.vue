@@ -58,8 +58,7 @@
         :key="index+1"
         xs12
         sm12
-        md12
-        lg6
+        md6
       >
         <v-card
           class="elevation-4"
@@ -299,7 +298,8 @@ export default {
       })
       that.GroupList[name] = that.DimList[name].group()
 
-      let tmpwidth = document.getElementById('layout').offsetWidth
+      let tmpwidth = document.getElementById('category-container').offsetWidth
+      let tmpheight = document.getElementById('category-container').offsetHeight
 
       if (name === 'category') {
         var tmpdiff = 240
@@ -308,7 +308,8 @@ export default {
       }
 
       that.ChartList[name]
-        .width(tmpwidth * 0.45)
+        .width(tmpwidth * 0.95)
+        .height(tmpheight * 0.8)
         .controlsUseVisibility(true)
         .dimension(that.DimList[name])
         .group(that.GroupList[name])
@@ -319,7 +320,7 @@ export default {
             .range(that.NameList[name].color)
         )
         .cx(370)
-        .legend(dc.legend().y(30))
+        .legend(dc.legend().y(0))
         .renderLabel(true)
         .label(function(d) {
           return d.value
@@ -353,8 +354,8 @@ export default {
       })
       that.GroupList[name] = that.DimList[name].group().reduceCount()
 
-      var tmpwidth = document.getElementById(name + '-container').offsetWidth
-      var tmpheight = document.getElementById(name + '-container').offsetHeight
+      let tmpwidth = document.getElementById('category-container').offsetWidth
+      var tmpheight = document.getElementById('category-container').offsetHeight
       // var barChartheight = document.getElementById('box-test').offsetHeight
       let max = that.DimList[name].top(1)[0][name] + 1
       let min = that.DimList[name].bottom(1)[0][name]
