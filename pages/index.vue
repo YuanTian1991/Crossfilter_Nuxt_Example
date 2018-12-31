@@ -58,7 +58,8 @@
         :key="index+1"
         xs12
         sm12
-        md6
+        md12
+        lg6
       >
         <v-card
           class="elevation-4"
@@ -158,8 +159,8 @@ export default {
       DimList: [],
       GroupList: [],
       NameList: {
-        categary: {
-          name: 'categary',
+        category: {
+          name: 'category',
           show: true,
           chart: 'pie',
           title: 'What category are these Cell Lines ?',
@@ -300,7 +301,7 @@ export default {
 
       let tmpwidth = document.getElementById('layout').offsetWidth
 
-      if (name === 'categary') {
+      if (name === 'category') {
         var tmpdiff = 240
       } else {
         var tmpdiff = 100
@@ -380,7 +381,7 @@ export default {
 
       dc.chartRegistry.list().forEach(function(chart) {
         chart.on('filtered', function() {
-          let tmpdata = that.DimList['categary'].top(Infinity)
+          let tmpdata = that.DimList['category'].top(Infinity)
           tmpdata.sort(sortBy('code_index', false, String))
           that.filterdata = tmpdata
         })

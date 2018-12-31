@@ -4,7 +4,7 @@ module.exports = {
   mode: 'universal',
 
   // // Added github
-  router: { base: '/Crossfilter_Nuxt_Example/' },
+  // router: { base: '/Crossfilter_Nuxt_Example/' },
   /*
   ** Headers of the page
   */
@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Cambria'
+        href: 'https://fonts.googleapis.com/css?family=Ubuntu'
       }
     ]
   },

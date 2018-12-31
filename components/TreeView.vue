@@ -67,7 +67,7 @@
                 />
               </v-avatar> -->
 
-              <CellLogo :name="selected.categary" />
+              <CellLogo :name="selected.category" />
 
               <h2
                 class="mb-2"
