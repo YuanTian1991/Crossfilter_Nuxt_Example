@@ -132,7 +132,7 @@ export default {
   asyncData({ req, params }) {
     return axios
       .get(
-        'https://raw.githubusercontent.com/YuanTian1991/Scripts/master/mockdata2.csv'
+        'https://raw.githubusercontent.com/YuanTian1991/Scripts/master/mockdata.csv'
       )
       .then(res => {
         var tmpdata = csvtojson(res.data)
