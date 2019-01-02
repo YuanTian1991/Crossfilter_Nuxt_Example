@@ -1,6 +1,8 @@
-# MyGithubPage
+# Crossfilter Nuxt Example
 
-> YuanTian1991&#39;s personal website
+[live](https://yuantian1991.github.io/Crossfilter_Nuxt_Example/)
+
+> Author: YuanTian1991
 
 ## Build Setup
 
